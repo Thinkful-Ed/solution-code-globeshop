@@ -8,45 +8,35 @@ This repository offers a product recommendation system using the Surprise librar
 ## Installation
 
 1. Clone this repository.
-
 2. Navigate to the project directory:
 
    ```bash
    cd globeshop-recommendation-system
    ```
-
 3. Set up a virtual environment (recommended). Depending on your OS, use one of the following:
-
    - macOS and Linux:
      ```bash
      python3 -m venv globeshop-recommendation-system-venv;
      source globeshop-recommendation-system-venv/bin/activate;
      ```
-
    - Windows:
      ```bash
      python -m venv globeshop-recommendation-system-venv
      .\globeshop-recommendation-system-venv\Scripts\activate
      ```
-
-4. Install the required packages:
-
-   ```bash
-   pip install flask pandas surprise;
+4. Install the required packages (Flask should be in the `requirements.txt`):
+   ```shell
+   pip install -r requirements.txt
    ```
-
 5. Run the API:
-
+   * By default, the API will start on `http://127.0.0.1:5001`
    ```bash
    python globalshop.py
    ```
 
-   By default, the API will start on `http://127.0.0.1:5001`
-
 ## API Descriptions
 
 1. Recommendation API (`globalshop.py`):
-
    - Get product recommendations for a specific user: `GET /recommendations/<user_id>`
    - Index page: `GET /`
 
@@ -54,7 +44,6 @@ This repository offers a product recommendation system using the Surprise librar
 
 - **user_behavior.csv**: Contains user ratings for products.
   - Columns: `user_id`, `product_id`, `rating`
-
 - **purchase_history.csv**: Contains records of user purchases.
   - Columns: `user_id`, `product_id`, `purchase_date`
 
